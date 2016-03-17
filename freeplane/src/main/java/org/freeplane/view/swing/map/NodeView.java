@@ -496,7 +496,7 @@ public class NodeView extends JComponent implements INodeView {
 		return model;
 	}
 
-	protected NodeView getNextSiblingSingle() {
+	public NodeView getNextSiblingSingle() {
 		LinkedList<NodeView> v = getSiblingViews();
 		final int index = v.indexOf(this);
 		for (int i = index + 1; i < v.size(); i++) {
@@ -614,7 +614,7 @@ public class NodeView extends JComponent implements INodeView {
 		return newSelected;
 	}
 
-	protected NodeView getPreviousSiblingSingle() {
+	public NodeView getPreviousSiblingSingle() {
 		LinkedList<NodeView> v = getSiblingViews();
 		final int index = v.indexOf(this);
 		for (int i = index - 1; i >= 0; i--) {

@@ -394,7 +394,7 @@ class MindMapHTMLWriter {
 			fileout.write(output);
 		}
 		else {
-			fileout.write(HtmlUtils.unicodeToHTMLUnicodeEntity(string));
+			fileout.write(HtmlUtils.unicodeToHTMLUnicodeEntity(string.replaceAll("\\&", "&amp;").replaceAll("\\\"", "&quot;").replaceAll("\\<", "&lt;").replaceAll("\\>", "&gt;").replaceAll("\\r\\n", "<br/>").replaceAll("\\n", "<br/>")));
 		}
     }
 	private void writeStyle() throws IOException {
